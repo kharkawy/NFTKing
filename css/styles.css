@@ -26,6 +26,7 @@ body {
 }
 
 .btn {
+  display: block;
   z-index: 0;
   position: relative;
   overflow: hidden;
@@ -33,6 +34,8 @@ body {
   border-width: 0;
   color: #ffffff;
   background: linear-gradient(97.86deg, #89c6ff -38.38%, #3633d0 71.88%);
+  text-decoration: none;
+  padding: 8px 24px;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
@@ -55,17 +58,106 @@ body {
 .btn:hover .btn-fill {
   transform: translateX(-31%);
 }
-
-.btn-large {
+.btn.btn-large {
   padding: 16px 24px;
 }
 
-a, input, .btn {
+a,
+input,
+.btn {
   outline: 3px solid transparent;
   transition: outline 0.5s ease;
 }
-a:focus-visible, input:focus-visible, .btn:focus-visible {
+a:focus-visible,
+input:focus-visible,
+.btn:focus-visible {
   outline: 3px solid #3633d0;
+}
+
+.trending .trending__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 90px;
+  column-gap: 90px;
+  justify-content: space-between;
+  max-width: 1082px;
+  margin: 0 auto;
+}
+.trending .tile {
+  max-width: 496px;
+  flex-basis: 100%;
+}
+.trending .tile .tile__image {
+  max-width: 496px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.trending .tile .tile__image .tile__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-top: 72.32%;
+}
+.trending .tile .tile__image .tile__image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  border-image-source: none;
+  border-color: #ffffff;
+}
+.trending .tile .tile__body {
+  margin-top: -60px;
+  max-width: 496px;
+  padding: 12px 24px 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 19px;
+  row-gap: 19px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 7px;
+  border-image-source: none;
+  border-color: #ffffff;
+}
+@media (max-width: 769px) {
+  .trending .tile .tile__body {
+    margin-top: -30px;
+  }
+}
+.trending .tile .tile__body h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.27;
+}
+.trending .tile .tile__body .tile__username {
+  display: block;
+  opacity: 0.5;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.trending .tile .tile__body .tile__price {
+  background: linear-gradient(97.86deg, #ff8d8d -38.38%, #f7fc0e 71.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-top: 7px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  line-height: 1.29;
 }
 
 .newsletter .newsletter-box__wrapper {

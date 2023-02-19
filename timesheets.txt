@@ -1,2 +1,4 @@
 15.02 - 1h 15min (project setup, gulp&sass installation)
 18.02 - 1h 45min (HTML structure created with selectors)
+19.03 - 2h 45min (styled containers layout, footer, newsletter, buttons and their hover effect)
+        2h (styled trending grid)
