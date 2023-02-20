@@ -8,7 +8,7 @@
   background-color: #3633d0;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1024px) {
   html {
     font-size: 14px;
   }
@@ -19,6 +19,13 @@ body {
   color: #ffffff;
 }
 
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 1.27;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -26,7 +33,7 @@ body {
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   z-index: 0;
   position: relative;
   overflow: hidden;
@@ -74,6 +81,125 @@ input:focus-visible,
   outline: 3px solid #3633d0;
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.5s ease;
+}
+.header.sticky {
+  background-color: #000000;
+}
+.header .container {
+  padding-top: 26px;
+  padding-bottom: 32px;
+}
+.header .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__nav-desktop .menu {
+  display: flex;
+  column-gap: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+.header .header__nav-desktop .menu .menu-item {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.17;
+}
+.header .header__nav-desktop .menu .menu-item a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+.header .header__nav-desktop .menu .menu-item a:hover {
+  color: #89c6ff;
+}
+.header .header__burger-btn {
+  position: absolute;
+  z-index: 1;
+}
+.header .header__burger-btn .burger-bar {
+  display: none;
+  height: 1px;
+  width: 25px;
+  display: block;
+  background: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 6px;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.5s ease;
+}
+@media (max-width: 1024px) {
+  .header .header__burger-btn .burger-bar {
+    display: block;
+  }
+}
+.header .header__burger-btn .burger-bar:first-child {
+  transform-origin: 0% 0%;
+}
+.header .header__burger-btn .burger-bar:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+.header .header__burger-btn:hover .burger-bar {
+  transform: rotate(-45deg) translate(-1px, 2px);
+}
+.header .header__burger-btn:hover .burger-bar:nth-last-child(2) {
+  transform: rotate(45deg) translate(-2px, -6px);
+}
+.header .header__burger-btn:hover .burger-bar:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.header .header__burger-btn:hover ~ .header__nav-mobile {
+  transform: translateX(0);
+}
+.header .header__nav-mobile {
+  background: #000000;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transform: translateX(-100%);
+}
+.header .header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1024px) {
+  .header .header__nav-desktop,
+  .header .header__button {
+    display: none;
+  }
+}
+
+.trending .trending__heading {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 89px;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+}
+.trending .trending__heading .trending__subtitle {
+  max-width: 603px;
+  margin-top: 11px;
+  opacity: 0.5;
+  text-align: justify;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.125;
+}
 .trending .trending__tiles {
   display: flex;
   flex-wrap: wrap;
@@ -83,22 +209,22 @@ input:focus-visible,
   max-width: 1082px;
   margin: 0 auto;
 }
-.trending .tile {
+.trending .trending__tiles .tile {
   max-width: 496px;
   flex-basis: 100%;
 }
-.trending .tile .tile__image {
+.trending .trending__tiles .tile .tile__image {
   max-width: 496px;
   margin: 0 auto;
   padding: 0 24px;
 }
-.trending .tile .tile__image .tile__image-wrapper {
+.trending .trending__tiles .tile .tile__image .tile__image-wrapper {
   position: relative;
   overflow: hidden;
   height: 0;
   padding-top: 72.32%;
 }
-.trending .tile .tile__image .tile__image-wrapper img {
+.trending .trending__tiles .tile .tile__image .tile__image-wrapper img {
   position: absolute;
   top: 0;
   left: 0;
@@ -111,7 +237,7 @@ input:focus-visible,
   border-image-source: none;
   border-color: #ffffff;
 }
-.trending .tile .tile__body {
+.trending .trending__tiles .tile .tile__body {
   margin-top: -60px;
   max-width: 496px;
   padding: 12px 24px 18px;
@@ -129,18 +255,18 @@ input:focus-visible,
   border-image-source: none;
   border-color: #ffffff;
 }
-@media (max-width: 769px) {
-  .trending .tile .tile__body {
+@media (max-width: 1024px) {
+  .trending .trending__tiles .tile .tile__body {
     margin-top: -30px;
   }
 }
-.trending .tile .tile__body h3 {
+.trending .trending__tiles .tile .tile__body h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1.625rem;
   font-weight: 600;
   line-height: 1.27;
 }
-.trending .tile .tile__body .tile__username {
+.trending .trending__tiles .tile .tile__body .tile__username {
   display: block;
   opacity: 0.5;
   font-family: "Roboto", sans-serif;
@@ -148,7 +274,7 @@ input:focus-visible,
   font-weight: 400;
   line-height: 1.25;
 }
-.trending .tile .tile__body .tile__price {
+.trending .trending__tiles .tile .tile__body .tile__price {
   background: linear-gradient(97.86deg, #ff8d8d -38.38%, #f7fc0e 71.88%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
