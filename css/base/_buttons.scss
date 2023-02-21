@@ -1,0 +1,43 @@
+.btn {
+  display: inline-block;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  border-width: 0;
+  color: $white;
+  background: linear-gradient(97.86deg, $light-blue -38.38%, $blue 71.88%);
+  text-decoration: none;
+  padding: 8px 24px;
+  cursor: pointer;
+  @include font-style(
+    $font-family-text,
+    $font-size-medium,
+    $font-weight-medium,
+    1.15
+  );
+
+  .btn-fill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    height: 100%;
+    width: 160%;
+    border-radius: 50px;
+    background: linear-gradient(97.86deg, $light-blue -5%, $blue 60%);
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: transform $transition;
+  }
+
+  &:hover {
+    .btn-fill {
+      transform: translateX(-31%);
+    }
+  }
+
+  &.btn-large {
+    padding: 16px 24px;
+  }
+}

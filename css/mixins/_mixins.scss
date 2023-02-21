@@ -1,0 +1,19 @@
+@mixin font-style($family, $size, $weight, $lineHeight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+@mixin border-style(
+  $width: 0,
+  $radius: 0,
+  $gradient: none,
+  $color: transparent
+) {
+  border-width: $width;
+  border-style: solid;
+  border-radius: $radius;
+  border-image-source: $gradient;
+  border-color: $color;
+}

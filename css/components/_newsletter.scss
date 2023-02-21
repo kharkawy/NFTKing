@@ -1,0 +1,45 @@
+.newsletter {
+    .newsletter-box__wrapper {
+      padding: 96px 20px;
+      background-color: $translucent;
+      backdrop-filter: blur(10px);
+      @include border-style(1px, 20px, none, $white);
+  
+      .newsletter-box {
+        margin: 0 auto;
+        max-width: 685px;
+        text-align: center;
+  
+        h2 {
+          margin-bottom: 14px;
+          @include font-style($font-family-headings, $font-size-heading-small, $font-weight-semibold, 1.3);
+        }
+  
+        p {
+          letter-spacing: 0.005em;
+          @include font-style($font-family-headings, $font-size-tiny, $font-weight-regular, 1.3);
+        }
+  
+        .newsletter__form {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          column-gap: 19px;
+          row-gap: 19px;
+          margin-top: 60px;
+  
+          input {
+            max-width: 528px;
+            width: 100%;
+            padding: 16px 24px 16px 24px;
+            border-radius: 50px;
+            border: none;
+            background-color: $translucent;
+            color: $white;
+  
+            @include font-style($font-family-text, $font-size-medium, $font-weight-regular, 1.15);
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,10 @@
+a,
+input,
+.btn {
+  outline: 3px solid transparent;
+  transition: outline 0.5s ease;
+
+  &:focus-visible {
+    outline: 3px solid $blue;
+  }
+}

@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  ::selection {
+    color: $white;
+    background-color: $blue;
+  }
+  
+  html {
+    @media (max-width: $breakpoint) {
+      font-size: $font-size-mobile;
+    }
+  }
+  
+  body {
+    background-color: $black;
+    color: $white;
+  }

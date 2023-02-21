@@ -1,0 +1,8 @@
+h2 {
+  @include font-style(
+    $font-family-headings,
+    $font-size-heading-medium,
+    $font-weight-semibold,
+    1.27
+  );
+}
