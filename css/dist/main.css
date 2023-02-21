@@ -87,6 +87,133 @@ body {
   line-height: 1.55;
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.5s ease;
+}
+.header.sticky {
+  background-color: #000000;
+}
+@media (max-width: 1024px) {
+  .header .main-nav,
+  .header .header__button {
+    display: none;
+  }
+}
+.header .container {
+  padding-top: 26px;
+  padding-bottom: 32px;
+}
+.header .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu {
+  display: flex;
+  column-gap: 30px;
+  list-style-type: none;
+  padding: 0;
+  flex-direction: row;
+}
+@media (max-width: 1024px) {
+  .header .menu {
+    flex-direction: column;
+  }
+}
+.header .menu .menu-item {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.17;
+}
+@media (max-width: 1024px) {
+  .header .menu .menu-item {
+    font-size: 1.75rem;
+    padding: 15px 0;
+  }
+}
+.header .menu .menu-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+.header .menu .menu-item a:hover {
+  color: #89c6ff;
+}
+.header .mobile-nav {
+  padding: 60px 30px;
+  background: #000000;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transform: translateX(-100%);
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header .mobile-nav {
+    display: block;
+  }
+}
+.header .burger-button {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  padding: 10px;
+}
+@media (max-width: 1024px) {
+  .header .burger-button {
+    display: block;
+  }
+}
+.header .burger-button .burger-bar {
+  height: 1px;
+  width: 25px;
+  display: block;
+  background: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 6px;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.5s ease;
+}
+.header .burger-button .burger-bar:first-child {
+  transform-origin: 0% 0%;
+}
+.header .burger-button .burger-bar:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+.header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-nav-visible {
+  overflow: hidden;
+}
+.mobile-nav-visible .burger-bar {
+  transform: rotate(-45deg) translate(-1px, 2px);
+}
+.mobile-nav-visible .burger-bar:nth-last-child(2) {
+  transform: rotate(45deg) translate(-2px, -6px);
+}
+.mobile-nav-visible .burger-bar:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.mobile-nav-visible .mobile-nav {
+  overflow: auto;
+  transform: translateX(0);
+}
+
 h2 {
   font-family: "Poppins", sans-serif;
   font-size: 3.75rem;
