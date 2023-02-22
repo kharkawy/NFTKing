@@ -17,3 +17,9 @@
   border-image-source: $gradient;
   border-color: $color;
 }
+
+@mixin gradient-text {
+  background: linear-gradient(97.86deg, $pink -38.38%, $yellow 71.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

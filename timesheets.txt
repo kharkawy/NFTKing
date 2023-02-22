@@ -3,3 +3,4 @@
 19.03 - 2h 45min (styled containers layout, footer, newsletter, buttons and their hover effect)
         2h (styled trending grid)
 20.03 - 3h (styled nav, trending grid)
+21.03 - 3h + 2h

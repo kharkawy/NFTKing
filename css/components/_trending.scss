@@ -2,7 +2,6 @@
   .trending__heading {
     display: flex;
     justify-content: space-between;
-    column-gap: 89px;
     flex-wrap: wrap;
     margin-bottom: 90px;
     .trending__subtitle {
@@ -78,11 +77,9 @@
         }
 
         .tile__price {
-          background: linear-gradient(97.86deg, $pink -38.38%, $yellow 71.88%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
           display: block;
           margin-top: 7px;
+          @include gradient-text;
           @include font-style($font-family-text, $font-size-price, $font-weight-bold, 1.29);
         }
       }

@@ -2,8 +2,15 @@
   font-family: "GT Walsheim Pro";
   src: url("/fonts/GTWalsheimPro/Regular/GTWalsheimPro-Regular.eot");
   src: url("/fonts/GTWalsheimPro/Regular/GTWalsheimPro-Regular.eot") format("embedded-opentype"), url("/fonts/GTWalsheimPro/Regular/GTWalsheimPro-Regular.woff2") format("woff2"), url("/fonts/GTWalsheimPro/Regular/GTWalsheimPro-Regular.woff") format("woff"), url("/fonts/GTWalsheimPro/Regular/GTWalsheimPro-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
+  font-style: 400;
+}
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: url("/fonts/GTWalsheimPro/Light/GTWalsheimPro-Light.eot");
+  src: url("/fonts/GTWalsheimPro/Light/GTWalsheimPro-Light.eot") format("embedded-opentype"), url("/fonts/GTWalsheimPro/Light/GTWalsheimPro-Light.woff2") format("woff2"), url("/fonts/GTWalsheimPro/Light/GTWalsheimPro-Light.woff") format("woff"), url("/fonts/GTWalsheimPro/Light/GTWalsheimPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: 300;
 }
 a,
 input,
@@ -73,6 +80,21 @@ body {
 }
 .btn.btn-large {
   padding: 16px 24px;
+}
+.btn.btn-outline {
+  background-image: none;
+  position: relative;
+}
+.btn.btn-outline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 3px;
+  background: linear-gradient(97.86deg, #89c6ff -38.38%, #3633d0 71.88%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .footer .container {
@@ -214,6 +236,13 @@ body {
   transform: translateX(0);
 }
 
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 4.1875rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+
 h2 {
   font-family: "Poppins", sans-serif;
   font-size: 3.75rem;
@@ -225,6 +254,96 @@ h2 {
   max-width: 1320px;
   margin: 0 auto;
   padding: 60px 20px;
+  height: 100%;
+}
+
+.hero {
+  height: calc(100vh - 98px);
+}
+.hero .hero__wrapper {
+  display: flex;
+  column-gap: 7px;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.hero .hero__wrapper .hero__col {
+  flex-basis: 50%;
+}
+.hero h1 {
+  margin-bottom: 28px;
+}
+.hero .highlight {
+  background: linear-gradient(97.86deg, #ff8d8d -38.38%, #f7fc0e 71.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero .hero__subtitle {
+  letter-spacing: 0.02em;
+  margin-bottom: 38px;
+  font-family: "Inter", sans-serif;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.5625;
+}
+.hero .btn {
+  padding: 16px 32px;
+}
+.hero .btn:last-child {
+  margin-left: 28px;
+}
+.hero .hero__images {
+  width: 362px;
+  height: 398px;
+  margin-bottom: -100px;
+  position: relative;
+  left: 16%;
+}
+.hero .hero__images:hover .hero__image:nth-child(2) {
+  transform: rotate(0deg);
+}
+.hero .hero__images:hover .hero__image:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.hero__image {
+  max-width: 362px;
+  aspect-ratio: 0.91;
+  object-fit: cover;
+  position: absolute;
+  transform-origin: bottom;
+  transition: transform 0.5s ease;
+  border-width: 3.5px;
+  border-style: solid;
+  border-radius: 10px;
+  border-image-source: none;
+  border-color: #ffffff;
+}
+.hero__image:nth-child(2) {
+  transform: rotate(10deg);
+}
+.hero__image:nth-child(1) {
+  transform: rotate(20deg);
+}
+
+.hero__logos {
+  padding: 45px 38px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: space-between;
+}
+.hero__logos::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+  padding: 1.5px;
+  background-image: linear-gradient(93.17deg, rgba(6, 19, 45, 0) 0.92%, #ffffff 100%), linear-gradient(93.17deg, #ffffff 0.92%, rgb(6, 19, 45) 100%);
+  -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .newsletter .newsletter-box__wrapper {
@@ -281,7 +400,6 @@ h2 {
 .trending .trending__heading {
   display: flex;
   justify-content: space-between;
-  column-gap: 89px;
   flex-wrap: wrap;
   margin-bottom: 90px;
 }
@@ -370,11 +488,11 @@ h2 {
   line-height: 1.25;
 }
 .trending .trending__tiles .tile .tile__body .tile__price {
+  display: block;
+  margin-top: 7px;
   background: linear-gradient(97.86deg, #ff8d8d -38.38%, #f7fc0e 71.88%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: block;
-  margin-top: 7px;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   font-weight: 700;

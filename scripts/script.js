@@ -14,3 +14,8 @@ window.addEventListener("scroll", (e) => {
 let burgerButton = document.getElementById("BurgerButton");
 
 burgerButton.addEventListener("click", (e) => document.body.classList.toggle("mobile-nav-visible"))
+
+let copyrightYear = document.getElementById("CopyrightYear");
+let currentYear = new Date().getFullYear();
+
+copyrightYear.innerHTML = currentYear;
