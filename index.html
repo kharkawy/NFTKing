@@ -9,9 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   </head>
   <body>
     <header id="Header" class="header">
@@ -34,10 +41,9 @@
                 <a href="/" title="NFTKing Community">Community</a>
               </li>
               <li class="menu-item">
-                <a href="/" class="btn" title="Connect Wallet"
-                  >Connect Wallet
-                  <div class="btn-fill"></div
-                ></a>
+                <a href="/" class="btn" title="Connect Wallet">
+                  Connect Wallet
+                </a>
               </li>
             </ul>
           </nav>
@@ -62,20 +68,21 @@
               height="24"
             />
           </a>
-          <a href="/" class="btn header__button" title="Connect Wallet"
-            >Connect Wallet
-            <div class="btn-fill"></div
-          ></a>
+          <a href="/" class="btn header__button" title="Connect Wallet">
+            Connect Wallet
+          </a>
         </div>
       </div>
     </header>
+    <div class="body-container">
     <section class="hero">
       <div class="container">
         <div class="hero__wrapper">
           <div class="hero__col">
             <h1>
               Discover & Collect
-              <span class="highlight">Super Rare</span> Digital Artworks
+              <span class="highlight">Super Rare</span>
+              Digital Artworks
             </h1>
             <p class="hero__subtitle">
               The largest NFT marketplace. Authentic and truly unique digital
@@ -83,38 +90,50 @@
               blockchain technology
             </p>
             <div class="hero__buttons">
-              <a href="/" class="btn" title="Read more about NFTKing"
-                >Let's Explore
-                <div class="btn-fill"></div
-              ></a>
+              <a href="/" class="btn" title="Read more about NFTKing">
+                Let's Explore
+              </a>
               <a
                 href="/"
                 class="btn btn-outline"
                 title="Go to NFTKing Marketplace"
-                >Sell NFT</a
               >
+                Sell NFT
+              </a>
             </div>
           </div>
           <div class="hero__col">
             <div class="hero__images">
-              <img
-                src="/media/hero-img-2.jpg"
-                class="hero__image hero__image-2"
-                alt="Hero image"
-                title="Hero image"
-              />
-              <img
-                src="/media/hero-img-3.jpg"
-                class="hero__image hero__image-3"
-                alt="Hero image"
-                title="Hero image"
-              />
-              <img
-                src="/media/hero-img-1.jpg"
-                class="hero__image hero__image-1"
-                alt="Hero image"
-                title="Hero image"
-              />
+              <div class="hero__image">
+                <div class="hero__image-wrapper">
+                  <img
+                    src="/media/hero-img-1.webp"
+                    class="image-1"
+                    alt="Hero image"
+                    title="Hero image"
+                  />
+                </div>
+              </div>
+              <div class="hero__image">
+                <div class="hero__image-wrapper">
+                  <img
+                  src="/media/hero-img-2.webp"
+                  class="image-2"
+                  alt="Hero image"
+                  title="Hero image"
+                  />
+                </div>
+              </div>
+              <div class="hero__image">
+                <div class="hero__image-wrapper">
+                  <img
+                    src="/media/hero-img-3.webp"
+                    class="image-3"
+                    alt="Hero image"
+                    title="Hero image"
+                  />
+                </div>
+              </div>
             </div>
             <div class="hero__logos">
               <a href="/" class="hero__logo">
@@ -122,16 +141,18 @@
                   src="/media/metamask.svg"
                   alt="Metamask"
                   title="Metamask"
+                  height="35"
                 />
               </a>
               <a href="/" class="hero__logo">
-                <img src="/media/binance.svg" alt="Binance" title="Binance" />
+                <img src="/media/binance.svg" alt="Binance" title="Binance" height="35" />
               </a>
               <a href="/" class="hero__logo">
                 <img
                   src="/media/coinbase.svg"
                   alt="Coinbase"
                   title="Coinbase"
+                  height="27"
                 />
               </a>
             </div>
@@ -154,7 +175,7 @@
             <div class="tile__image">
               <div class="tile__image-wrapper">
                 <img
-                  src="/media/trending-1.jpg"
+                  src="/media/trending-1.webp"
                   alt="Miles Grogosters"
                   title="Miles Grogosters"
                   loading="lazy"
@@ -168,10 +189,7 @@
                 <span class="tile__price">4.99 ETH</span>
               </div>
               <div>
-                <a href="/" class="btn" title=""
-                  >Collect Now
-                  <div class="btn-fill"></div
-                ></a>
+                <a href="/" class="btn" title="Collect Now">Collect Now</a>
               </div>
             </div>
           </div>
@@ -179,7 +197,7 @@
             <div class="tile__image">
               <div class="tile__image-wrapper">
                 <img
-                  src="/media/trending-2.jpg"
+                  src="/media/trending-2.webp"
                   alt="Reox Fancxy"
                   title="Reox Fancxy"
                   loading="lazy"
@@ -193,10 +211,7 @@
                 <span class="tile__price">3.27 ETH</span>
               </div>
               <div>
-                <a href="/" class="btn" title=""
-                  >Collect Now
-                  <div class="btn-fill"></div
-                ></a>
+                <a href="/" class="btn" title="Collect Now">Collect Now</a>
               </div>
             </div>
           </div>
@@ -204,7 +219,7 @@
             <div class="tile__image">
               <div class="tile__image-wrapper">
                 <img
-                  src="/media/trending-3.jpg"
+                  src="/media/trending-3.webp"
                   alt="Miles Grogosters"
                   title="Miles Grogosters"
                   loading="lazy"
@@ -218,10 +233,7 @@
                 <span class="tile__price">4.20 ETH</span>
               </div>
               <div>
-                <a href="/" class="btn" title=""
-                  >Collect Now
-                  <div class="btn-fill"></div
-                ></a>
+                <a href="/" class="btn" title="Collect Now">Collect Now</a>
               </div>
             </div>
           </div>
@@ -229,7 +241,7 @@
             <div class="tile__image">
               <div class="tile__image-wrapper">
                 <img
-                  src="/media/trending-4.jpg"
+                  src="/media/trending-4.webp"
                   alt="Tuinz Rey"
                   title="Tuinz Rey"
                   loading="lazy"
@@ -243,10 +255,7 @@
                 <span class="tile__price">2.99 ETH</span>
               </div>
               <div>
-                <a href="/" class="btn" title=""
-                  >Collect Now
-                  <div class="btn-fill"></div
-                ></a>
+                <a href="/" class="btn" title="Collect Now">Collect Now</a>
               </div>
             </div>
           </div>
@@ -257,36 +266,363 @@
       <div class="container">
         <h2 class="toplist__title">Top List Creator</h2>
         <div class="toplist__tab-group">
-          <a href="/" class="" title="">Popular</a>
-          <a href="/" class="" title="">Following</a>
+          <a href="Popular" class="btn btn-outline active" title="Popular">Popular</a>
+          <a href="Following" class="btn btn-outline" title="Following">Following</a>
         </div>
         <div class="toplist__tab-content">
           <div
-            id="PopularSlider"
-            class="toplist__slider toplist__slider-popular"
+            id="Popular"
+            class="toplist__slider toplist__slider-popular active"
           >
-            <div class="slide">
-              <div class="slide__image">
-                <img src="" alt="" title="" />
+            <div class="glide glide-1">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-1.webp" alt="Hibnastiar" title="Hibnastiar" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-1.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Hibnastiar</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">27.3K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline">Followed</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-2.webp" alt="Tukirin" title="Tukirin" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-2.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Tukirin</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">21.6K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline btn-unchecked">
+                            Follow
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-3.webp" alt="Aksaraz" title="Aksaraz" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-3.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Aksaraz</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">14.0K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline">Followed</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-4.webp" alt="Yuk Jum" title="Yuk Jum" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-4.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Yuk Jum</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">11.9K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline btn-unchecked">
+                            Follow
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-2.webp" alt="Tukirin" title="Tukirin" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-2.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Tukirin</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">21.6K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline btn-unchecked">
+                            Follow
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-1.webp" alt="Hibnastiar" title="Hibnastiar" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-1.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Hibnastiar</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">27.3K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline">Followed</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="slide__body">
-                <div class="slide__avatar">
-                  <img src="" alt="" title="" />
-                </div>
-                <h3 class="slide__title">Hibnastiar</h3>
-                <div class="slide__artwork">
-                  <p><span class="highlight">27.3K</span> Artwork</p>
-                </div>
-                <div class="slide__button">
-                  <a href="/" title="">Followed</a>
-                </div>
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
               </div>
             </div>
           </div>
-          <div
-            id="FollowingSlider"
-            class="toplist__slider toplist__slider-following"
-          ></div>
+          <div id="Following" class="toplist__slider toplist__slider-following">
+            <div class="glide glide-2">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-2.webp" alt="Tukirin" title="Tukirin" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-2.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Tukirin</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">21.6K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline btn-unchecked">
+                            Follow
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-1.webp" alt="Hibnastiar" title="Hibnastiar" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-1.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Hibnastiar</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">27.3K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline" title="">Followed</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-4.webp" alt="Yuk Jum" title="Yuk Jum" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-4.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Yuk Jum</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">11.9K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline">Followed</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-3.webp" alt="Aksaraz" title="Aksaraz" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-3.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Aksaraz</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">14.0K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline btn-unchecked">
+                            Follow
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-2.webp" alt="Tukirin" title="Tukirin" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-2.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Tukirin</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">21.6K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline btn-unchecked">
+                            Follow
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="slide">
+                      <div class="slide__image">
+                        <img src="/media/toplist-img-1.webp" alt="Hibnastiar" title="Hibnastiar" width="305" height="163" loading="lazy"/>
+                      </div>
+                      <div class="slide__body">
+                        <img
+                          class="slide__avatar"
+                          src="/media/toplist-avatar-1.png"
+                          alt="Avatar"
+                          title="Avatar"
+                          width="65" height="65" loading="lazy"
+                        />
+                        <h3 class="slide__title">Hibnastiar</h3>
+                        <div class="slide__artwork">
+                          <p>
+                            <span class="highlight">27.3K</span>
+                            Artwork
+                          </p>
+                        </div>
+                        <div class="slide__button">
+                          <a class="btn btn-outline">Followed</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -307,10 +643,7 @@
                 placeholder="Enter your email address"
                 required
               />
-              <button class="btn btn-large">
-                Subscribe
-                <div class="btn-fill"></div>
-              </button>
+              <button class="btn btn-large">Subscribe</button>
             </div>
           </div>
         </div>
@@ -319,10 +652,14 @@
     <footer class="footer">
       <div class="container">
         <p class="footer__copyright">
-          © 2018 - <span id="CopyrightYear">2022</span> NFTKING, Inc
+          © 2018 -
+          <span id="CopyrightYear">2022</span>
+          NFTKING, Inc
         </p>
       </div>
     </footer>
+  </div>
     <script src="/scripts/script.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   </body>
 </html>
