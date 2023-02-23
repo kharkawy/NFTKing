@@ -1,7 +1,7 @@
 .DS_STORE
 
 /node_modules/
-timesheets.txt
+*timesheets.txt
 
 # Ignore npm debug log
 npm-debug.log
