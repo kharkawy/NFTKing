@@ -8,7 +8,7 @@ const uglify = require("gulp-uglify");
 const del = require("del");
 
 gulp.task("copy", function () {
-  return gulp.src("src/index.html").pipe(gulp.dest("dist"));
+  return gulp.src("src/index.html").pipe(gulp.dest("docs"));
 });
 
 gulp.task("glide", function () {
@@ -17,15 +17,15 @@ gulp.task("glide", function () {
       "node_modules/@glidejs/glide/dist/glide.min.js",
       "node_modules/@glidejs/glide/dist/css/glide.core.min.css",
     ])
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 });
 
 gulp.task("assets", function () {
-  return gulp.src("src/assets/**/*").pipe(gulp.dest("dist/"));
+  return gulp.src("src/assets/**/*").pipe(gulp.dest("docs/"));
 });
 
 gulp.task("clean", function () {
-  return del(["dist/**/*"]);
+  return del(["docs/**/*"]);
 });
 
 gulp.task("css", function () {
@@ -38,11 +38,11 @@ gulp.task("css", function () {
       })
     )
     .pipe(cleanCSS())
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 });
 
 gulp.task("js", function () {
-  return gulp.src("src/js/script.js").pipe(uglify()).pipe(gulp.dest("dist"));
+  return gulp.src("src/js/script.js").pipe(uglify()).pipe(gulp.dest("docs"));
 });
 
 gulp.task('main', function() {

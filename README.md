@@ -14,4 +14,4 @@ This project is part of a recruitment process.
 1. To run compilation pipeline in a watch mode run: `npm start`.
 
 ## Build
-1. Compilation pipeline will output files to `/dist` folder. To run the pipeline: `npm run build`.
+1. Compilation pipeline will output files to `/docs` folder. To run the pipeline: `npm run build`.
