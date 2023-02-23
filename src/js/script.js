@@ -2,15 +2,15 @@ function updateCopyrightYear() {
   const copyrightYear = document.getElementById("CopyrightYear");
   const currentYear = new Date().getFullYear();
 
-  copyrightYear.innerHTML = currentYear;
+  copyrightYear.innerText = currentYear;
 }
 
 function checkHeaderScroll() {
   const header = document.getElementById("Header");
   const headerPos = header.getBoundingClientRect().top;
 
-  window.addEventListener("scroll", (e) => {
-    let scrollPos = window.scrollY;
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY;
 
     if (scrollPos > headerPos) {
       header.classList.add("sticky");
@@ -23,7 +23,7 @@ function checkHeaderScroll() {
 function toggleMobileMenu() {
   const burgerButton = document.getElementById("BurgerButton");
 
-  burgerButton.addEventListener("click", (e) =>
+  burgerButton.addEventListener("click", () =>
     document.body.classList.toggle("mobile-nav-visible")
   );
 }
@@ -36,22 +36,25 @@ function toggleTabs() {
   [...toplistTabButtons].forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      if (!btn.classList.contains("active")) {
-        let activeButton = document.querySelector(
-          ".toplist__tab-group .btn.active"
-        );
-        activeButton.classList.remove("active");
-        btn.classList.add("active");
 
-        let targetTabId = btn.getAttribute("href");
-        let targetTab = document.getElementById(targetTabId);
-        let activeTab = document.querySelector(".toplist__slider.active");
-        activeTab.classList.remove("active");
-        targetTab.classList.add("active");
-
-        fadeIn(targetTab, 600);
-        fadeOut(activeTab, 600);
+      if (btn.classList.contains("active")) {
+        return;
       }
+
+      let activeButton = document.querySelector(
+        ".toplist__tab-group .btn.active"
+      );
+      activeButton.classList.remove("active");
+      btn.classList.add("active");
+
+      let targetTabId = btn.getAttribute("href");
+      let targetTab = document.getElementById(targetTabId);
+      let activeTab = document.querySelector(".toplist__slider.active");
+      activeTab.classList.remove("active");
+      targetTab.classList.add("active");
+
+      fadeIn(targetTab, 600);
+      fadeOut(activeTab, 600);
     });
   });
 
@@ -124,6 +127,7 @@ function mountSliders() {
       },
     },
   }).mount();
+
   new Glide(".glide-2", {
     perView: 4,
     bound: true,
@@ -141,11 +145,21 @@ function mountSliders() {
   }).mount();
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
+function main() {
   checkHeaderScroll();
   toggleMobileMenu();
   toggleTabs();
   mountSliders();
   toggleFollowButton();
   updateCopyrightYear();
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  
 });
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", main);
+} else {
+  main()
+}
