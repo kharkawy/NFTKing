@@ -1,0 +1,105 @@
+.toplist {
+  .container {
+    padding-top: 69px;
+  }
+  
+  h2 {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .toplist__tab-group {
+    display: flex;
+    justify-content: center;
+    column-gap: 21px;
+    margin-bottom: 60px;
+
+    .btn {
+      padding: 12px 32px;
+      font-size: $font-size-small;
+
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 0;
+        }
+
+        &:hover {
+          &::before {
+            transform: translateX(-32%);
+          }
+        }
+      }
+    }
+  }
+
+  .toplist__tab-content {
+    .toplist__slider {
+      visibility: hidden;
+      height: 0;
+
+      &.active {
+        visibility: visible;
+        height: 100%;
+      }
+
+      .slide {
+        margin: 0 auto;
+        max-width: 305px;
+        border-radius: 27px;
+        background: $gray;
+
+        .slide__image {
+          img {
+            display: block;
+            max-width: 100%;
+            border-radius: 27px;
+            aspect-ratio: 1.87;
+            object-fit: cover;
+          }
+        }
+
+        .slide__body {
+          position: relative;
+          padding: 34px 14px 16px;
+          text-align: center;
+
+          .slide__avatar {
+            position: absolute;
+            top: -42px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include border-style(9px, 100%, none, $gray);
+          }
+
+          .slide__title {
+            margin-bottom: 24px;
+            @include font-style($font-family-text, $font-size-medium, $font-weight-medium, 1.175);
+          }
+
+          .slide__artwork {
+            margin-bottom: 34px;
+            p {
+              @include gradient-text;
+              @include font-style($font-family-headings, $font-size-tiny, $font-weight-light,1.5);
+
+              .highlight {
+                @include font-style($font-family-text, $font-size-medium, $font-weight-bold, 1.175);
+              }
+            }
+          }
+
+          .slide__button {
+            .btn {
+              padding: 16px 99px;
+              width: 100%;
+              border-radius: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

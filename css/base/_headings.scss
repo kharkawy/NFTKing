@@ -1,17 +1,7 @@
 h1 {
-  @include font-style(
-    $font-family-hero,
-    $font-size-heading-large,
-    $font-weight-bold,
-    1.23
-  );
+  @include font-style($font-family-hero, $font-size-heading-large, $font-weight-bold, 1.23);
 }
 
 h2 {
-  @include font-style(
-    $font-family-headings,
-    $font-size-heading-medium,
-    $font-weight-semibold,
-    1.27
-  );
+  @include font-style($font-family-headings, $font-size-heading-medium, $font-weight-semibold, 1.27);
 }

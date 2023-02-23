@@ -23,3 +23,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@mixin gradient-background ($width, $height: $width, $opacity: 0.5) {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: $width;
+  height: $height;
+  opacity: $opacity;
+  background: radial-gradient(34.98% 34.98% at 50% 50%, $violet 0%, transparent 100%);
+}
+

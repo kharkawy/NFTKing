@@ -1,0 +1,46 @@
+.hero,
+.trending,
+.toplist,
+.newsletter {
+  position: relative;
+}
+
+.hero {
+  &::before {
+    top: -780px;
+    right: -620px;
+    @include gradient-background(1468px);
+  }
+}
+
+.trending {
+  &::before {
+    top: -1070px;
+    left: -1120px;
+    @include gradient-background(2370px);
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include gradient-background(2866px, 2358px, 0.3);
+  }
+}
+
+.toplist {
+  &::before {
+    top: 50%;
+    right: -1370px;
+    transform: translateY(-50%);
+    @include gradient-background(2866px, 2358px);
+  }
+}
+
+.newsletter {
+  &::before {
+    top: -840px;
+    left: -1340px;
+    @include gradient-background(2866px, 2866px, 0.3);
+  }
+}

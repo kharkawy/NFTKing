@@ -1,0 +1,33 @@
+.glide {
+  .glide__bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+  }
+
+  .glide__bullet {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    border-radius: 20px;
+    background: $translucent2;
+    transition: width $transition;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      background: linear-gradient(97.86deg, $light-blue -38.38%, $blue 71.88%);
+      transition: opacity $transition;
+    }
+  }
+
+  .glide__bullet--active {
+    width: 40px;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
