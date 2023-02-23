@@ -1,7 +1,7 @@
 .DS_STORE
 
-/dist/
 /node_modules/
+timesheets.txt
 
 # Ignore npm debug log
 npm-debug.log
